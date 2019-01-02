@@ -245,7 +245,7 @@ class Sticky {
     if (element.sticky.wrap) {
       this.css(element.parentNode, {
         display: 'block',
-        width: element.sticky.rect.width + 'px',
+        width: '100%',
         height: element.sticky.rect.height + 'px',
       });
     }

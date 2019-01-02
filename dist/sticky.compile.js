@@ -266,7 +266,7 @@ var Sticky = function () {
     if (element.sticky.wrap) {
       this.css(element.parentNode, {
         display: 'block',
-        width: element.sticky.rect.width + 'px',
+        width: '100%',
         height: element.sticky.rect.height + 'px'
       });
     }
@@ -458,7 +458,9 @@ var Sticky = function () {
   if (typeof exports !== 'undefined') {
     module.exports = factory;
   } else if (typeof define === 'function' && define.amd) {
-    define([], factory);
+    define([], function () {
+      return factory;
+    });
   } else {
     root.Sticky = factory;
   }
