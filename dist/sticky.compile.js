@@ -376,7 +376,8 @@ var Sticky = function () {
   Sticky.prototype.getRectangle = function getRectangle(element) {
     this.css(element, { position: '', width: '', top: '', left: '' });
 
-    var width = Math.max(element.offsetWidth, element.clientWidth, element.scrollWidth);
+    // const width = Math.max(element.offsetWidth, element.clientWidth, element.scrollWidth);
+    var width = Math.max(element.offsetWidth, element.clientWidth);
     var height = Math.max(element.offsetHeight, element.clientHeight, element.scrollHeight);
 
     var top = 0;
